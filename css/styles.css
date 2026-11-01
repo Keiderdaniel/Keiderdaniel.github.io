@@ -3,3 +3,24 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+.highlight {
+    color: #8c00ff; /* cor roxo */
+}
+
+/* Tamanho e cor dos ícones */
+#social-container {
+    list-style: none; /* Tira os pontinhos da lista */
+    display: flex; /* Coloca os ícones lado a lado */
+    gap: 15px; /* Dá um espacinho entre eles */
+}
+
+#social-container a {
+    color: #000; /* Cor preta */
+    text-decoration: none; /* Tira o sublinhado */
+    transition: 0.3s; /* Efeito suave quando passar o mouse */
+}
+
+#social-container a:hover {
+    color: #8c00ff; /* Fica roxo quando passa o mouse */
+}
