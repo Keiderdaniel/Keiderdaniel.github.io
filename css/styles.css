@@ -1,11 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-    font-family: 'Roboto', sans-serif;
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
 }
 
+:root {
+    --main-color: #8c00ff;
+    --main-text-color: #a8a8b3; 
+    --border-color: #54B689;
+    --bio-bg-color: #1e1e24;
+    --bio-border-color: #999;
+    --about-bg-color: #121214;
+}
+
+body {
+    background-color: var(--about-bg-color);
+    color: var(--main-text-color);
+    font-family: 'roboto', sans-serif;
+}
+
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
 .highlight {
     color: #8c00ff; /* cor roxo */
+}
+
+.description {
+    color: var(--main-text-color);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#name {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 /* Tamanho e cor dos ícones */
@@ -16,11 +51,76 @@ body {
 }
 
 #social-container a {
-    color: #000; /* Cor preta */
+    color: var(--main-text-color); /* Cor preta */
     text-decoration: none; /* Tira o sublinhado */
     transition: 0.3s; /* Efeito suave quando passar o mouse */
 }
 
 #social-container a:hover {
-    color: #8c00ff; /* Fica roxo quando passa o mouse */
+    color: var(--main-color); /* Fica roxo quando passa o mouse */
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    color: var(--main-text-color);
+}
+
+#bio-container {
+    width: 35%;
+    min-height: 100vh;
+    background-color: var(--bio-bg-color);
+    text-align: center;
+    padding: 30px 12px;
+    border-right: 5px solid var(--bio-border-color);
+}
+
+#about-container {
+    width: 70%;
+    height: 100%;
+    background-color: var(--about-bg-color);
+    color: var(--main-text-color);
+    padding: 50px;
+}
+
+#bio-container h2 {
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+#bio-container p {
+    margin-bottom: 20px;
+}
+
+#bio-container img {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+#social-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+#social-container li {
+    flex: 1 1 0;
+    max-width: 60px;
+}
+#social-container li a {
+    max-width: 60px;
+}
+
+
+#bio-container #welcome-text {
+    font-weight: bold;
+}
+
+#bio-container img {
+    display: none;
 }
