@@ -9,7 +9,7 @@
 
 :root {
     --main-color: #8c00ff;
-    --main-text-color: #a8a8b3; 
+    --main-text-color: #a8a8b3;
     --border-color: #54B689;
     --bio-bg-color: #1e1e24;
     --bio-border-color: #999;
@@ -26,38 +26,76 @@ a {
     color: var(--main-color);
     text-decoration: none;
 }
+
 .highlight {
-    color: #8c00ff; /* cor roxo */
+    color: #8c00ff;
+    /* cor roxo */
 }
 
 .description {
     color: var(--main-text-color);
     font-size: 1rem;
     line-height: 1.5;
-    margin-bottom: 20px;
+    max-width: 75%;
+    margin-bottom: 10px;
+}
+
+#title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 #name {
+    font-size: 42px;
     color: #ffffff;
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#btn-projects {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    margin: 25px 0;
+    padding: 12px 10px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#btn-projects:hover {
+    background-color: transparent;
 }
 
 /* Tamanho e cor dos ícones */
 #social-container {
-    list-style: none; /* Tira os pontinhos da lista */
-    display: flex; /* Coloca os ícones lado a lado */
-    gap: 15px; /* Dá um espacinho entre eles */
+    list-style: none;
+    /* Tira os pontinhos da lista */
+    display: flex;
+    /* Coloca os ícones lado a lado */
+    gap: 15px;
+    /* Dá um espacinho entre eles */
 }
 
 #social-container a {
-    color: var(--main-text-color); /* Cor preta */
-    text-decoration: none; /* Tira o sublinhado */
-    transition: 0.3s; /* Efeito suave quando passar o mouse */
+    color: var(--main-text-color);
+    /* Cor preta */
+    text-decoration: none;
+    /* Tira o sublinhado */
+    transition: 0.3s;
+    /* Efeito suave quando passar o mouse */
 }
 
 #social-container a:hover {
-    color: var(--main-color); /* Fica roxo quando passa o mouse */
+    color: var(--main-color);
+    /* Fica roxo quando passa o mouse */
 }
 
 #container {
@@ -112,10 +150,10 @@ a {
     flex: 1 1 0;
     max-width: 60px;
 }
+
 #social-container li a {
     max-width: 60px;
 }
-
 
 #bio-container #welcome-text {
     font-weight: bold;
@@ -123,4 +161,105 @@ a {
 
 #bio-container img {
     display: none;
+}
+
+#skills-section-title {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px
+}
+
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-size: 32px;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+#skills-container li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#skills-container i {
+    font-size: 40px
+}
+
+#skills-container span {
+    font-size: 16px;
+    color: var(--main-text-colorcolor);
+}
+
+.skills-box {
+    flex: 1 1 33%;
+    max-width: 33%;
+    margin-bottom: 35px;
+}
+
+.skills-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 5px solid var(--border-color);
+}
+
+@media(max-width: 450px) {
+
+    #container {
+        flex-direction: column;
+       /* min-height: auto;
+        border-right: none;
+        border-bottom: 5px solid var(--bio-border-color); */
+    }
+
+    #bio-container {
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 5px solid vasr(--bio-border-color);
+        padding: 30px 12px;
+    }
+
+    #bio-container h2 {
+        display: none;
+    }
+
+    #bio-container p {
+        max-width: 60%;
+        margin: 10px auto;
+    }
+
+    #about-container {
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+    }
+
+    #about-container .description {
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
+    }
+
+    #btn-projects {
+        margin: 20px auto;
+    }
+
+    .skills-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .skills-box i {
+        font-size: 60px;
+    }
 }
